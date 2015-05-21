@@ -4,73 +4,122 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-   >
+    android:background="#000000">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:text="Enter a message to be sent, a phone number to send it to, and an interval at which texts should be sent."
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textColor="#ffd9d9d9"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Message:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:textColor="#ffa7a7a7" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/message"
-        android:minWidth="10dp"
-        android:layout_alignRight="@+id/phone"
-        android:layout_alignEnd="@+id/phone"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/phone"
-        android:layout_alignStart="@+id/phone" />
+        android:autoText="false"
+        android:layout_below="@+id/textView2"
+        android:gravity="center_horizontal"
+        android:textColor="#ffe6e6e6"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter message here"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:typeface="monospace"
+        android:textColorHint="#FFD5D5D5"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Message:"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Phone Number:"
-        android:id="@+id/textView2"
-        android:layout_marginTop="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Phone number:"
+        android:id="@+id/textView3"
+        android:layout_marginTop="35dp"
+        android:textColor="#ffa7a7a7"
         android:layout_below="@+id/message"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
         android:id="@+id/phone"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:autoText="false"
+        android:gravity="center_horizontal"
+        android:textColor="#ffe6e6e6"
+        android:hint="Enter phone number"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:typeface="monospace"
+        android:layout_below="@+id/textView3"
+        android:inputType="phone"
+        android:textColorHint="#FFD5D5D5"
+        android:layout_alignRight="@+id/interval"
+        android:layout_alignEnd="@+id/interval"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+        <!--android:phoneNumber="true" -->
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Time Interval (Minutes)"
-        android:id="@+id/textView3"
-        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Interval (minutes)"
+        android:id="@+id/textView4"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffa7a7a7"
+        android:layout_below="@+id/phone"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/interval"
+        android:autoText="false"
+        android:gravity="center_horizontal"
+        android:textColor="#ffe6e6e6"
+        android:hint="Enter interval for messages"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:typeface="monospace"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/time"
-        android:longClickable="true"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView4"
+        android:textColorHint="#FFD5D5D5"
+        android:layout_alignRight="@+id/message"
+        android:layout_alignEnd="@+id/message"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:phoneNumber="false"
+        android:numeric="integer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:background="#ff202020" />
 
 </RelativeLayout>
